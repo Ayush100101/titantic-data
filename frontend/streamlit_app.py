@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-BACKEND_URL = os.getenv("BACKEND_URL", "http://127.0.0.1")
+BACKEND_URL = os.getenv("BACKEND_URL", "https://titantic-data.onrender.com")
 BACKEND_PORT = os.getenv("BACKEND_PORT", "10000")
 API_ENDPOINT = f"{BACKEND_URL}:{BACKEND_PORT}/ask/"
 
