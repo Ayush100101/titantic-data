@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+pandas
+matplotlib
+seaborn
+langchain
+llama-cpp-python
+requests
+python-dotenv
