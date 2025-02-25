@@ -7,3 +7,4 @@ langchain
 llama-cpp-python
 requests
 python-dotenv
+groq
