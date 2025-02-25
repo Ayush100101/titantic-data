@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -6,9 +7,17 @@ import base64
 from langchain.chains import LLMChain
 from langchain.prompts import PromptTemplate
 from groq import Groq
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
+
+# Get API key from environment
+api_key = os.getenv("LLAMA_API_KEY")
 
 # Initialize Groq client
-client = Groq(api_key="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")  
+client = Groq(api_key=api_key)  
+
 # Define a prompt template for general questions
 template = """Question: {question}
 Answer: Let's think step by step."""
