@@ -6,12 +6,10 @@ from io import BytesIO
 import os
 from dotenv import load_dotenv
 
-# Load environment variables from .env file
 load_dotenv()
 
-# Get backend URL and port from environment variables, with a default fallback
 BACKEND_URL = os.getenv("BACKEND_URL", "http://127.0.0.1")
-BACKEND_PORT = os.getenv("BACKEND_PORT", "10000")  # Default port is 10000
+BACKEND_PORT = os.getenv("BACKEND_PORT", "10000")
 API_ENDPOINT = f"{BACKEND_URL}:{BACKEND_PORT}/ask/"
 
 st.title("Titanic Dataset Chatbot")
