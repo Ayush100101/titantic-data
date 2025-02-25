@@ -7,8 +7,10 @@ app = FastAPI()
 class Query(BaseModel):
     question: str
 
+@app.get("/")
+async def root():
+    return {"message": "Titanic Chatbot API is running! Use /ask/ to interact."}
+
 @app.post("/ask/")
 async def ask_question(query: Query):
-    question = query.question
-    result = process_question(question)
-    return result
+    return process_question(query.question)
